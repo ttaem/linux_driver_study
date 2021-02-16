@@ -1,4 +1,4 @@
-obj-m += helloworld.o
+obj-m += helloworld.o helloworld_char_driver.o
 
 all:
 	echo $(PWD)
@@ -10,4 +10,4 @@ clean:
                 M=$(PWD) clean
 
 deploy:
-	scp helloworld.ko $(MY_DEPLOY_DIR)
+	scp helloworld.ko helloworld_char_driver.ko $(MY_DEPLOY_DIR)
